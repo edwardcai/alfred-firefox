@@ -559,9 +559,29 @@ const Background = function() {
       });
   };
 
+  // searching for a group name like: 
+  // moz-extension://44370dc1-6961-4907-81a7-898274211aff/resources/group-tab.html?title=keyboard+maestro+pause+between+actions+-+Google+Search+and+more&temporary=true
   self.renameTabGroup = tabGroupName => {
     console.debug(`rename-tab-group ${tabGroupName}`);
-    return;
+    return browser.tabs
+      .query({
+        // url: "<all_urls>",
+        url: "moz-extension://*/*",
+        title: "* and more"
+      })
+      .then(tabs => {
+        if (tabs.length) {
+          console.debug(`found tab group to rename: ${tabs[0].title}`);
+          let newTitle = tabGroupName;
+          let currentUrl = tabs[0].url;
+          let newUrl = currentUrl.replace(/title=.*&/, `title=${newTitle}&`);
+          console.debug(`renaming tab group to: ${newTitle} by changing url to ${newUrl}`);
+          browser.tabs.update(tabs[0].id, { url: newUrl }).then(_ => {
+            console.debug(`finished renaming`);
+          });
+        }
+        return null;
+      });
   };
 
 
