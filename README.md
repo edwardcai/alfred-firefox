@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="https://github.com/deanishe/alfred-firefox/blob/master/icon.png" alt="Alfred-Firefox icon" title="Alfred-Firefox icon"/>
-</div>
-
 Firefox Assistant for Alfred
 ============================
 
@@ -10,6 +6,14 @@ Search and manipulate Firefox's bookmarks, history and tabs from Alfred.
 ![Animated demo of workflow in use][demo]
 
 The workflow can be easily [extended with your own actions][scripts].
+
+## Why edward forked it
+
+Original isn't updated much, so I thought I might as well fork it so I can mess around with it.
+
+To install the extension, I'm just using it as a temporary add on and not bothering with actually publishing it to the add on store
+
+See [stackoverflow](https://stackoverflow.com/a/67501680) for how to do this
 
 Installation
 ------------

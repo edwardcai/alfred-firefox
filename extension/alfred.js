@@ -271,14 +271,8 @@ const Background = function() {
    */
   self.sendNative = msg => {
     if (self.nativePort) {
-      self.nativePort.postMessage(msg)
-        .then(resp => {
-          console.log(`sent:`, msg);
-          console.log(`response:`, resp);
-        })
-        .catch(err => {
-          console.error(`send error: ${err.message}`);
-      });
+      self.nativePort.postMessage(msg);
+      console.log(`sent:`, msg);
     }
   };
 
@@ -527,7 +521,7 @@ const Background = function() {
       if (!bookmarks.length) throw 'bookmark not found';
       let bm = bookmarks[0];
       if (!bm.url.startsWith('javascript:')) throw 'not a bookmarklet';
-      let js = decodeURI(bm.url.slice(11));
+      let js = decodeURIComponent(bm.url.slice(11));
       if (params.tabId) browser.tabs.executeScript(params.tabId, { code: js });
       else browser.tabs.executeScript({ code: js });
     });

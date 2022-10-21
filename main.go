@@ -42,7 +42,7 @@ const (
 
 // native application manifest
 var (
-	extensionID   = "alfredfirefox@deanishe.net"
+	extensionID   = "some-name@example.org"
 	extensionName = "net.deanishe.alfred.firefox"
 	manifestPath  = os.ExpandEnv("${HOME}/Library/Application Support/Mozilla/" +
 		"NativeMessagingHosts/" + extensionName + ".json")

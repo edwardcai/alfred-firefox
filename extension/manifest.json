@@ -11,8 +11,14 @@
 
   "applications": {
     "gecko": {
-      "id": "alfredfirefox@deanishe.net",
+      "id": "some-name@example.org",
       "strict_min_version": "74.0"
+    }
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "some-name@example.org"
     }
   },
 
