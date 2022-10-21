@@ -183,6 +183,15 @@ var (
 		LongHelp:  wrap(`Reveal file in Finder.`),
 		Exec:      runReveal,
 	}
+
+	// rename tab group
+	renameTabGroupCmd = &ffcli.Command{
+		Name:      "rename-tab-group",
+		Usage:     "alfred-firefox rename-tab-group <name>",
+		ShortHelp: "renames a tab group",
+		LongHelp:  wrap(`Rename a tab group created by the tree-style-tab extension.`),
+		Exec:      runRenameTabGroup,
+	}
 )
 
 func init() {
@@ -645,6 +654,13 @@ func runReveal(args []string) error {
 	path := args[0]
 	log.Printf("revealing file %q in Finder ...", util.PrettyPath(path))
 	return exec.Command("/usr/bin/open", "-R", path).Run()
+}
+
+// rename a tab group
+func runRenameTabGroup(args []string) error {
+	tabGroupName := args[0]
+	log.Printf("Renaming tab group to ", tabGroupName)
+	return mustClient().RenameTabGroup(tabGroupName)
 }
 
 // run update check in background

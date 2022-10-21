@@ -247,6 +247,9 @@ const Background = function() {
         case 'open-incognito':
           p = self.openIncognito(msg.params);
           break;
+        case 'rename-tab-group':
+          p = self.renameTabGroup(msg.params);
+          break;
         default:
           console.error(`unknown command: ${msg.command}`);
           self.sendError(msg.id, 'unknown command');
@@ -555,6 +558,12 @@ const Background = function() {
         return null;
       });
   };
+
+  self.renameTabGroup = tabGroupName => {
+    console.debug(`rename-tab-group ${tabGroupName}`);
+    return;
+  };
+
 
   browser.runtime.onConnect.addListener(self.onConnected);
   self.connectNative();

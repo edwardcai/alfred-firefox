@@ -121,6 +121,11 @@ func (c *rpcClient) OpenIncognito(URL string) error {
 	return c.client.Call("Firefox.OpenIncognito", URL, nil)
 }
 
+// RenameTabGroup opens a URL in a new Incognito window.
+func (c *rpcClient) RenameTabGroup(tabGroupName string) error {
+	return c.client.Call("Firefox.RenameTabGroup", tabGroupName, nil)
+}
+
 // RunJS executes JavaScript in the specified tab. If tabID is 0, the
 // script is executed in the current tab.
 func (c *rpcClient) RunJS(arg RunJSArg) (string, error) {

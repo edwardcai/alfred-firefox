@@ -245,6 +245,20 @@ func (s *rpcServer) OpenIncognito(URL string, _ *struct{}) error {
 	return nil
 }
 
+// RenameGroup renames a tab group created from the tree style tab extension.
+func (s *rpcServer) RenameTabGroup(tabGroupName string, _ *struct{}) error {
+	log.Print("RPC server received rename tab group request")
+	defer util.Timed(time.Now(), "rename tab group")
+	var r responseNone
+	if err := s.ff.call("rename-tab-group", tabGroupName, &r); err != nil {
+		return err
+	}
+	if r.Error != "" {
+		return errors.New(r.Error)
+	}
+	return nil
+}
+
 // RunJSArg is the arguments required for RunJS call. TabID may be 0, in which
 // case the JavaScript is executed in the active tab.
 type RunJSArg struct {

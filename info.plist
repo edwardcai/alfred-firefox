@@ -162,6 +162,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>864DB68D-E86C-4907-B8D1-A1D76039F305</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>15B00AB3-29A0-43A9-8ABA-C2E2B160142B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>90AB6B8E-FA06-41A9-84E6-5FFCE62AC5F2</key>
 		<array>
 			<dict>
@@ -490,9 +503,9 @@
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>org.mozilla.nightly</string>
 					<string>org.mozilla.firefoxdeveloperedition</string>
 					<string>org.mozilla.firefox</string>
+					<string>org.mozilla.nightly</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -501,6 +514,44 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>7D1126FC-FAE3-40C1-A536-43C272DF9E69</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>rename tab group</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>864DB68D-E86C-4907-B8D1-A1D76039F305</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./alfred-firefox rename-tab-group "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>15B00AB3-29A0-43A9-8ABA-C2E2B160142B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -709,6 +760,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -997,9 +1050,9 @@ variables={allvars}
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>org.mozilla.nightly</string>
 					<string>org.mozilla.firefoxdeveloperedition</string>
 					<string>org.mozilla.firefox</string>
+					<string>org.mozilla.nightly</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -1112,9 +1165,9 @@ variables={allvars}
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>org.mozilla.nightly</string>
 					<string>org.mozilla.firefoxdeveloperedition</string>
 					<string>org.mozilla.firefox</string>
+					<string>org.mozilla.nightly</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -1203,6 +1256,8 @@ variables={allvars}
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>current-tab</string>
 			</dict>
@@ -1235,6 +1290,8 @@ variables={allvars}
 				</array>
 				<key>elselabel</key>
 				<string>Write to file</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -1289,41 +1346,48 @@ https://github.com/deanishe/alfred-firefox/blob/master/doc/index.md</string>
 			<key>note</key>
 			<string>Search bookmarklets</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>210</integer>
+			<real>210</real>
+		</dict>
+		<key>15B00AB3-29A0-43A9-8ABA-C2E2B160142B</key>
+		<dict>
+			<key>xpos</key>
+			<real>1140</real>
+			<key>ypos</key>
+			<real>55</real>
 		</dict>
 		<key>1EC09EB7-CFB9-47D8-84DE-37BF4875F906</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1115</integer>
+			<real>1115</real>
 			<key>ypos</key>
-			<integer>420</integer>
+			<real>420</real>
 		</dict>
 		<key>26D5BE1B-9DAB-4039-9C7E-D639974A2614</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1025</integer>
+			<real>1025</real>
 			<key>ypos</key>
-			<integer>420</integer>
+			<real>420</real>
 		</dict>
 		<key>2C1CC9A6-A0BD-47C3-8B39-372093A348B1</key>
 		<dict>
 			<key>note</key>
 			<string>Search downloads</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>715</integer>
+			<real>715</real>
 		</dict>
 		<key>38D3C7F8-AD9B-4880-8502-5DE4D69EA265</key>
 		<dict>
 			<key>note</key>
 			<string>Actions for current tab</string>
 			<key>xpos</key>
-			<integer>640</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>3B55C751-F185-42F2-94E2-51D978345C6A</key>
 		<dict>
@@ -1332,39 +1396,39 @@ https://github.com/deanishe/alfred-firefox/blob/master/doc/index.md</string>
 			<key>note</key>
 			<string>EXAMPLE: Run an action on current tab/URL via Hotkey</string>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>895</integer>
+			<real>895</real>
 		</dict>
 		<key>51A796F3-097D-42E9-B30B-156D2DDF354B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>535</real>
 			<key>ypos</key>
-			<integer>895</integer>
+			<real>895</real>
 		</dict>
 		<key>56FBB613-EE25-4DE4-930D-C1F51B9235D8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>535</real>
 			<key>ypos</key>
-			<integer>410</integer>
+			<real>410</real>
 		</dict>
 		<key>58CBD6D3-C6D1-48CF-9A34-7EE5EBA5886B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>380</integer>
+			<real>380</real>
 		</dict>
 		<key>5A0372A7-7488-4146-B8CD-17B1834B2EF6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>210</integer>
+			<real>210</real>
 		</dict>
 		<key>5BF0D3BF-6F14-4F9A-9B19-A9C967146414</key>
 		<dict>
@@ -1373,16 +1437,16 @@ https://github.com/deanishe/alfred-firefox/blob/master/doc/index.md</string>
 			<key>note</key>
 			<string>EXAMPLE: Run a bookmarklet via Hotkey</string>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>720</integer>
+			<real>720</real>
 		</dict>
 		<key>5FA508A4-6E47-4864-9E18-E367A73CE48E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>705</integer>
+			<real>705</real>
 			<key>ypos</key>
-			<integer>1080</integer>
+			<real>1250</real>
 		</dict>
 		<key>6532A845-EED7-4D18-B9E5-CF600E823EC3</key>
 		<dict>
@@ -1391,9 +1455,9 @@ https://github.com/deanishe/alfred-firefox/blob/master/doc/index.md</string>
 
 Can either write tab info to a file or pass it to another External Trigger.</string>
 			<key>xpos</key>
-			<integer>35</integer>
+			<real>35</real>
 			<key>ypos</key>
-			<integer>1135</integer>
+			<real>1305</real>
 		</dict>
 		<key>7D1126FC-FAE3-40C1-A536-43C272DF9E69</key>
 		<dict>
@@ -1402,121 +1466,130 @@ Can either write tab info to a file or pass it to another External Trigger.</str
 			<key>note</key>
 			<string>Don't forget to set this Hotkey!</string>
 			<key>xpos</key>
-			<integer>455</integer>
+			<real>455</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>83477ED1-950C-4E4D-9D22-CDEC701CA68D</key>
 		<dict>
 			<key>note</key>
 			<string>Workflow status &amp; options</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>880</integer>
+			<real>880</real>
+		</dict>
+		<key>864DB68D-E86C-4907-B8D1-A1D76039F305</key>
+		<dict>
+			<key>xpos</key>
+			<real>950</real>
+			<key>ypos</key>
+			<real>50</real>
 		</dict>
 		<key>90AB6B8E-FA06-41A9-84E6-5FFCE62AC5F2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>535</real>
 			<key>ypos</key>
-			<integer>720</integer>
+			<real>720</real>
 		</dict>
 		<key>93E61791-1520-4B4F-9257-C5B28A505058</key>
 		<dict>
 			<key>xpos</key>
-			<integer>30</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>545</integer>
+			<real>545</real>
 		</dict>
 		<key>96C33C0A-5D89-4903-97AC-E430858902FA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>20</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>9AF41D0B-F6CB-4063-BF22-96F22182CFE3</key>
 		<dict>
 			<key>note</key>
 			<string>Filter Tab/URL Actions</string>
 			<key>xpos</key>
-			<integer>815</integer>
+			<real>815</real>
 			<key>ypos</key>
-			<integer>495</integer>
+			<real>495</real>
 		</dict>
 		<key>9BC83CA0-50A2-4869-B7EB-BFBD30373A03</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>1155</integer>
+			<real>1325</real>
 		</dict>
 		<key>A52B48B5-24BA-4D67-A6DD-C2F404F964CC</key>
 		<dict>
 			<key>note</key>
 			<string>Search history</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>545</integer>
+			<real>545</real>
 		</dict>
 		<key>AE956921-0416-405F-B748-94C23CDB2774</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1205</integer>
+			<real>1205</real>
 			<key>ypos</key>
-			<integer>390</integer>
+			<real>390</real>
 		</dict>
 		<key>B353C303-DA6D-4AFC-8F19-04BA6ABB1E27</key>
 		<dict>
 			<key>note</key>
 			<string>Filter tabs</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>380</integer>
+			<real>380</real>
 		</dict>
 		<key>E05E7619-441A-4B3A-A8FE-8E21C2C82F10</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>535</real>
 			<key>ypos</key>
-			<integer>1080</integer>
+			<real>1250</real>
 		</dict>
 		<key>E2BDC50E-36DB-45DE-B40E-24BA116ADFE6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<real>640</real>
 			<key>ypos</key>
-			<integer>400</integer>
+			<real>400</real>
 		</dict>
 		<key>E3C926B1-9A80-48ED-9705-8C835D7FB18F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>30</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>715</integer>
+			<real>715</real>
 		</dict>
 		<key>E51D9E39-F895-4FD6-B159-0CB29463CA21</key>
 		<dict>
 			<key>note</key>
 			<string>Search bookmarks</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>F1A91452-6475-4C85-B248-2FBCDB93AF89</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>535</real>
 			<key>ypos</key>
-			<integer>1230</integer>
+			<real>1400</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variables</key>
 	<dict>
 		<key>TAB_CTRL</key>

@@ -119,6 +119,7 @@ func init() {
 		tabsCmd,
 		urlCmd,
 		updateCmd,
+		renameTabGroupCmd,
 	}
 	pidFile = filepath.Join(wf.CacheDir(), "server.pid")
 	logfile = filepath.Join(wf.CacheDir(), fmt.Sprintf("%s.server.log", wf.BundleID()))
