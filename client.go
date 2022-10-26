@@ -659,7 +659,7 @@ func runReveal(args []string) error {
 // rename a tab group
 func runRenameTabGroup(args []string) error {
 	tabGroupName := args[0]
-	log.Printf("Renaming tab group to ", tabGroupName)
+	log.Print("Renaming tab group to " + tabGroupName)
 	return mustClient().RenameTabGroup(tabGroupName)
 }
 
